@@ -1,0 +1,35 @@
+{template 'header','yybq'}
+<style>
+	.peiliao{
+		width:1000px;
+		margin:10px auto;
+		border:1px solid #ccc;
+		padding:20px;
+		border-radius: 3px;
+		background: #fff;
+	}
+	.red{
+		color:red;
+	}
+</style>
+	<div id="container">
+		<div class="neirong pinfo">
+			<h3 class="title">营养成分表</h3>
+			<table class="table table-hover">
+				<tr>
+					<th>项目</th>
+					<th>每100g</th>
+					<th>营养素参考值</th>
+				</tr>
+				{loop $yybq $k $v}
+				<tr>
+					<td>{$v['name']}/{$v['en_name']}</td>
+					<td>{$v['zhi']}{$v['unit']}{if $v['en_unit']}({$v['en_unit']}){/if}</td>
+					<td>%</td>
+				</tr>
+				{/loop}
+			</table>
+		</div>
+
+	</div>
+{template 'footer','yybq'}

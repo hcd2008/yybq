@@ -1,0 +1,49 @@
+{template 'header','yybq'}
+	<style>
+		.form-control{
+			float: left;
+			margin-right: 5px;
+		}
+		#peiliao{
+			width:1000px;
+			margin:10px auto;
+			border:1px solid #ccc;
+			padding:20px;
+			border-radius: 3px;
+			background: #fff;
+		}
+	</style>
+	<div id="container">
+		<div id="peiliao">
+		<h3 class="title">填写产品信息</h3>
+		<form action="" method="post">
+			<input type="hidden" name="action" value="addinfo">
+			<table class="table">
+				<tr>
+					<td width=100>产品分类 <span class="red">*</span></td>
+					<td>
+						<?php require DT_ROOT.'/include/post.func.php'; echo category_select('catid', '选择分类', $catid, $moduleid); ?>
+					</td>
+				</tr>
+				<tr>
+					<td width=100>产品名称 <span class="red">*</span></td>
+					<td>
+						<input type="text" name="name" class="form-control chang">
+					</td>
+				</tr>
+				<tr>
+					<td width=100>产品代码</td>
+					<td>
+						<input type="text" name="code" class="form-control duan">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" value="下一步" name="submit" class="btn btn-info">
+					</td>
+				</tr>
+			</table>
+		</form>
+		</div>
+	</div>
+{template 'footer','yybq'}

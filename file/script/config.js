@@ -1,0 +1,1 @@
+var DTPath = "http://yybq.foodvip.net/";var SKPath = "http://yybq.foodvip.net/skin/default/";var MEPath = "http://yybq.foodvip.net/member/";var DTEditor = "fckeditor";var CKDomain = "";var CKPath = "/";var CKPrex = "c35_";
